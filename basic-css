@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Gilroy";
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        .main{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .box{
+           height: 40%;
+           width: 30%;
+           background-color: aqua;
+           position: absolute;
+           animation-name: move;
+           animation-duration: 3s;
+           animation-delay: 1s;
+           animation-fill-mode: backwards; /*what properties do u want to have in animatipn at the last is it the starting thing or the ending thing*/
+           animation-iteration-count: 2;
+           animation-timing-function: ease-in;  /*starting fast and ending late*/
+           animation-timing-function: cubic-bezier(0, .93,.47,.43);  /*go to cubic-bezier wensite and copy paste*/
+           animation-direction: alternate; /*once straight and once opposite to it*/
+        
+        }
+
+        h2{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        }
+
+        h1::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            bottom: 0;
+            background-color: black;
+            left: 0;
+        }
+        h1:hover::after{
+            
+            animation-name: line;
+            animation-duration: 2s;
+        }
+        @keyframes move{
+            from{
+                left: 0;
+                rotate: 0deg;
+            }
+            to{
+                left: 50%;
+                rotate: 360deg;
+            }
+        }
+
+        @keyframes line {
+            0%{
+                width: 0;
+                left: 0;
+            }
+            50%{
+                width: 100%;
+                left: 0
+            }
+            100%{
+                width: 0%;
+                left: 100%;
+            }
+        } 
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box"></div>
+        <h2>Hello Youtube</h2>
+    </div>
+</body>
+</html>
