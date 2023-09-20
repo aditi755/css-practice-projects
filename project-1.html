@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Gilroy";
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+       .main{
+        height: 100%;
+        width: 100%;
+        background-color: red;
+        display: flex;
+       }
+       #left{
+        height: 100%;
+        width: 40%;
+        background-color: white;
+        position: relative;
+       }
+       #right{
+        height: 100%;
+        width: 60%;
+        background-color: pink;
+       }
+       #rtop{
+        height: 50%; 
+        width: 100%;
+       display: flex;/*from page resp*/
+       }
+       #rtop1{
+        flex: 1;
+        width: 50%;
+        height: 100%;
+        background-image: url(https://images.unsplash.com/photo-1557800636-894a64c1696f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3JhbmdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);
+        background-size: cover;
+        background-position: center;     
+       }
+    
+
+    #rtop2{
+        flex: 1;
+        width: 50%;
+        height: 100%;
+        background-image: url(https://images.unsplash.com/photo-1592187270271-9a4b84faa228?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    #rbot{
+        width: 100%;
+        height: 50%;
+        background-image: url(https://images.unsplash.com/photo-1611076351766-d561d39b6af3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+        background-size: cover;
+        background-position: center; 
+    }
+
+       #lnav{
+         padding: 20px 30px;
+         display: flex;
+         justify-content: space-between;
+        }
+       #lnavr a{
+         margin-right: 120px;
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        font-size: 14px;
+       }
+       #lnavr i{
+        color: royalblue;
+       }
+
+   #left #text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   } 
+   #text h1{
+    font-size: 90px;
+    font-weight: 900;
+   }
+   #text p{
+    font-size: 12px;
+    line-height: 20px;
+    opacity: .6;
+    margin-top: 20px;
+    margin-bottom: 20px;
+   }
+   #text a {
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    font-size: 13px;
+    font-weight: 600 ;
+    opacity: .6;
+}
+
+@media(max-width: 500px){
+    .main{
+      flex-direction: column;
+    }
+    .main #left{
+        width: 100%;
+    }
+    .main #right{
+        width: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div id="left">
+        <div id="lnav">
+            <i class="ri-arrow-left-line"></i>
+            <div id="lnavr">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <i class="ri-twitter-fill"></i>
+            </div>
+        </div>
+        <div id="text">
+        <h1> Hello,</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi magni, expedita delectus quis fugiat eos? Esse quisquam animi aliquam aperiam quaerat ab fugiat! Laboriosam est harum unde quasi exercitationem. Quia.</p>
+        <a href="#">Read more</a>    
+    </div>
+    </div>
+    <div id="right">
+        <div id="rtop">
+            <div id="rtop1"></div>
+            <div id="rtop2"></div>
+        </div>
+        <div id="rbot"></div>
+    </div>
+    </div>
+</body>
+</html>
