@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Gilroy";
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        #main{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img{
+            height: 70%;
+            object-fit: cover;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 99;
+        }
+    
+        #scroll-div{
+            position: absolute;
+            top: 20%;
+            Width: 100%;
+            /*height: 100px;*/
+            white-space: nowrap; /*element comes in one line*/
+            overflow-x: auto;
+            overflow-y: hidden; 
+        }
+
+        #scroll-div::-webkit-scrollbar{
+          display: none;
+        }
+        #scroll-div h1{
+           display: inline-block;
+           font-size: 150px;
+           font-family: monument;
+           text-transform: uppercase;
+           margin-right: 30px;
+           letter-spacing: 3px;
+           animation-name: scroll;
+           animation-duration: 1s;
+           animation-iteration-count: infinite;
+           animation-timing-function: linear;/*8smoothly animation run*/
+        }
+        #scroll-div2{
+            position: absolute;
+            top: 40%;
+            Width: 100%;
+            z-index: 100;
+            /*height: 100px;*/
+            white-space: nowrap; /*element comes in one line*/
+            overflow-x: auto;
+            overflow-y: hidden; 
+        }
+
+        #scroll-div2::-webkit-scrollbar{
+          display: none;
+        }
+        #scroll-div2 h1{
+           display: inline-block;
+           font-size: 150px;
+           font-family: monument;
+           text-transform: uppercase;
+           margin-right: 30px;
+           letter-spacing: 3px;
+           color: transparent;
+           -webkit-text-stroke-width: 2px;
+           -webkit-text-stroke-color: #000;
+           animation-name: scroll;
+           animation-duration: 1s;
+           animation-iteration-count: infinite;
+           animation-timing-function: linear;
+        }
+        #scroll-div3{
+            position: absolute;
+            top: 60%;
+            Width: 100%;
+            /*height: 100px;*/
+            white-space: nowrap; /*element comes in one line*/
+            overflow-x: auto;
+            overflow-y: hidden; 
+        }
+
+        #scroll-div3::-webkit-scrollbar{
+          display: none;
+        }
+        #scroll-div3 h1{
+           display: inline-block;
+           font-size: 150px;
+           font-family: monument;
+           text-transform: uppercase;
+           margin-right: 30px;
+           letter-spacing: 3px;
+           animation-name: scroll;
+           animation-duration: 1s;
+           animation-iteration-count: infinite;
+           animation-timing-function: linear;
+           animation-direction: reverse;
+         
+        }
+        #text{
+            font-size: 18px;
+            position: absolute;
+            top: 15%;
+            font-family: monument;
+        width: 60%;
+       text-transform: uppercase;
+        z-index: 999;
+        text-align: center;
+        }
+
+        @keyframes scroll{
+            0%{
+             
+              transform: translateX(calc(-100% - 32%));
+            }
+            100% {
+                transform: translateX(0);
+                
+}
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main"> 
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9kZWx8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="">
+         <div id="text"> Our Brand is here to listen to the customers. And, we will make you feel good.</div>
+        <div id="scroll-div">
+        <H1>Brand</H1>
+        <H1>Brand</H1>
+        <H1>Brand</H1>
+        <H1>Brand</H1>
+    </div>
+    <div id="scroll-div2">
+        <H1>Brand</H1>
+        <H1>Brand</H1>
+        <H1>Brand</H1>
+        <H1>Brand</H1>
+    </div>
+    <div id="scroll-div3">
+        <H1>Brand</H1>
+        <H1>Brand</H1>
+        <H1>Brand</H1>
+        <H1>Brand</H1>
+    </div>
+    </div>
+
+</body>
+</html>
