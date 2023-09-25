@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Gilroy";
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        .main{
+          height: 100%;
+          width: 100%;
+          position: relative;
+            
+        }
+
+         .nav{
+            height: 100px;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 3vw;
+            border-bottom: 2px solid #dadada;
+            padding: 0 4vw;
+        }
+        .nav-part2{
+            display: flex;
+            justify-content: space-between;
+            gap: 4vw;
+        }
+
+        .nav h2{
+            font-size: 1.5vw;
+            font-weight: 700;
+        }
+        .nav-part2 h4{
+          font-size: 1.2vw;
+          margin-top:20px; 
+        }
+        .nav-part2 button{
+            font-size: 1vw;
+                padding: 0.5vw 1.4vw;
+                background-color: #FF735C;
+                border: none;
+                border-radius: 5px;
+                font-weight: 700;
+                color: white;
+                margin-top: 20px;
+        }
+        .nav-part2 i{
+            display: none;
+        }
+        .content{
+            height: calc(100% - 100px);
+            width: 100%;
+            position: relative;
+            display: flex;
+
+        }
+        .left{
+            height: 100%;
+            width: 55%;
+            
+            padding: 5vw 4vw;
+        }
+        .left h1{
+           font-size: 4vw;
+           line-height: 4.4vw;
+        }
+        .left h1 span{
+            color: #FF735C;
+        }
+        .left p{
+            font-size: 1.2vw;
+            font-weight: 600;
+            width: 80%;
+            color: #666;
+            margin-top: 3vw;
+            margin-bottom: 4vw;
+        }
+        .right{
+            height: 100%;
+            width: 45%;
+           
+        }
+        button{
+                font-size: 1.5vw;
+                padding: 1vw 2vw;
+                background-color: #FF735C;
+                border: none;
+                border-radius: none;
+                border-radius: 5px;
+                font-weight: 700;
+             }      
+           
+        @media (max-width: 600px){
+            .nav{
+                padding: 0 6vw;
+                height: 60px;
+            }
+            .nav h2{
+                font-size: 6vw;
+            }
+            .nav-part2 h4{
+                font-size: 6vw;
+                display: none;
+            }
+            .nav-part2 i{
+                font-size: 4.5vw; 
+                display: block;        
+            }
+            .nav-part2 button{
+                display: none;
+            }
+          .content{
+            height: calc(100% - 60px);  /*60px is minus bcoz .nav height is 60px*/
+            flex-direction: column;  
+        }
+        .left{
+            width: 100%;
+            height: 50%;
+            padding: 4vw 6vw;
+        }
+        .right {
+          width: 100%;
+          height: 50%;
+        }
+        .left h1{
+            font-size: 10vw;
+            line-height: 11vw;
+        }
+        .left p{
+            font-size: 4vw;
+            width: 90%;
+            margin-top: 5vw;
+            margin-bottom: 6vw;
+        }
+        .content button{
+            padding: 4vw 10vw;
+            font-size: 3.5vw;
+            border-radius: 3px;
+            font-weight: 600;
+
+        }
+    .right img{
+        background-size: cover;
+        width: 90%;
+        margin-top: 25vh;
+    }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+             <h2>Logo</h2>
+             <div class="nav-part2">
+                <h4>Store</h4>
+                <h4>Courses</h4>
+                <h4>Career</h4>
+                <h4>Blog</h4>
+                <h4>Account</h4>
+                <button>Sign In</button>
+                <i class="ri-menu-3-line"></i>
+             </div>
+        </div>
+        <div class="content">
+           <div class="left">
+            <h1>Learn from the <span>coolest</span> coding platform if India</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae eum rerum adipisci sit reprehenderit, libero impedit officia deleniti labore illo ipsum quod assumenda esse similique, soluta quidem natus sapiente ullam.</p>  
+        <button>Explore now</button>   
+    </div>
+           <div class="right">
+           <img src="https://img.freepik.com/free-vector/hand-coding-concept-illustration_114360-8113.jpg" alt="">
+           </div>
+        </div>
+    </div>
+</body>
+</html>
