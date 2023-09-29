@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        .main{
+            height: 100%;
+            width: 100%;
+            background-color: cyan;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cursor{
+            height: 20px;                
+            width: 20px;
+            background-color: yellow;
+            border-radius: 50px; 
+            position: absolute;
+            transition: all linear 2s;
+            mix-blend-mode: difference; 
+        }
+        h1{
+            font-size: 10vw;
+            font-weight: 900;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="cursor"></div>
+        <h1>Magic</h1>
+    
+    </div>
+    <script>
+var master = document.querySelector(".main")
+var crsr = document.querySelector(".cursor")
+
+
+master.addEventListener("mousemove" ,function(details){
+   console.log(details)
+   crsr.style.left = details.x +"px"
+   crsr.style.right = details.y +"px"
+})
+    </script>
+</body>
+</html>

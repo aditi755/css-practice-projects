@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+ *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container{
+            height: 400px;
+            width: 300px;
+            border-radius: 10px;
+            background-color: red;
+            position: relative;
+            overflow: hidden;
+        }
+        #container img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        #container i{
+            color: black;
+            font-size: 70px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0.8;
+           transition: transform ease 0.6s;
+        background-color: yellow;
+        }
+        i:active {
+  transform: rotate(360deg);
+}
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" alt="">
+        <i  class="ri-heart-3-fill"></i>
+    </div>
+
+    <script>
+  var con = document.querySelector("#container")
+  var love = document.querySelector("i")
+
+  con.addEventListener("dblclick", function(){
+    love.style.transform = 'translate(-50%, -50%) scale(1)'
+    love.style.opacity = 0.8
+    console.log("clickeced")
+    
+    setTimeout(function(){
+      love.style.opacity = '0'
+    },1000)
+    setTimeout(function(){
+        love.style.transform = 'translate(-50%, -50%) scale(0)'
+    },2000)
+  })   //delay
+    </script>
+
+    
+</body>
+</html>
